@@ -174,14 +174,14 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
     for key, value in birthdays.items():
         # 获取距离下次生日的时间
         birth_day = get_birthday(value["birthday"], year, today)
-        if birth_day == 0:
+        if int(birth_day) == 0:
             if value["name"] == '悦悦':
                 birthday_data = "今天是悦悦宝宝的生日哦！阳阳祝悦悦宝宝生日快乐。今天阳阳的目标是让悦悦开心！阳阳要好好陪悦悦哦！"
             elif value["name"] == '阳阳':
                 birthday_data = "今天是阳阳宝宝的生日哦！悦悦祝阳阳宝宝生日快乐。今天悦悦的目标是让阳阳开心！悦悦要好好陪阳阳哦！"
             else:
                 birthday_data = "今天是{}宝宝的生日哦！祝{}宝宝生日快乐！{}宝宝今天要开开心心哦！".format(value["name"], value["name"], value["name"])
-        elif birth_day > 0 and birth_day <= 10:
+        elif int(birth_day) > 0 and int(birth_day) <= 10:
             if value["name"] == '悦悦':
                 birthday_data = "悦悦宝宝的生日只有{}天啦！阳阳要记得准备礼物哦！".format(birth_day)
             elif value["name"] == '阳阳':
