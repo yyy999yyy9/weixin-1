@@ -6,6 +6,7 @@ from datetime import datetime, date
 from zhdate import ZhDate
 import sys
 import os
+import requests             #调用requests库import json
 
 
 def get_color():
@@ -97,6 +98,15 @@ def get_birthday(birthday, year, today):
         birth_day = str(birth_date.__sub__(today)).split(" ")[0]
     return birth_day
 
+
+def get_loveWords():
+    url = 'https://api.lovelive.tools/api/SweetNothings/Web/1'
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                             "Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3756.400 QQBrowser/10.5.4039.400"}  # 构建请求头  模拟浏览器访问
+
+    r = requests.get(url, headers=headers)
+    data = r.json()['returnObj']['content']
+    return data
 
 def get_ciba():
     url = "http://open.iciba.com/dsapi/"
@@ -232,7 +242,9 @@ if __name__ == "__main__":
     weather, max_temperature, min_temperature = get_weather(province, city)
     # 获取词霸每日金句
     note_ch, note_en = get_ciba()
+    # 获取每日情话
+    loves = get_loveWords()
     # 公众号推送消息
     for user in users:
-        send_message(user, accessToken, city, weather, max_temperature, min_temperature, note_ch, note_en)
+        send_message(user, accessToken, city, weather, max_temperature, min_temperature, note_ch, note_en, loves)
     os.system("pause")
