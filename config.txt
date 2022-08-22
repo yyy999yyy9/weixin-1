@@ -6,8 +6,8 @@
 "app_secret": "9e5ca1ffdd0766eebf61e0b6ea2c9659",
 # 模板消息id
 "template_id": "rhBFLHVh4hmlopDldU2gnaua5JMm0hHTfERfrRliBtc",
-# 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"] , "o_KmK6H5uuMnLS27kdOmtcIWERdk"
-"user": ["o_KmK6DG2Woqlve7Clz1bT-xXoBA"],
+# 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
+"user": ["o_KmK6DG2Woqlve7Clz1bT-xXoBA", "o_KmK6H5uuMnLS27kdOmtcIWERdk"],
 
 # 信息配置
 # 所在省份
