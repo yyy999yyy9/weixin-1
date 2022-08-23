@@ -1,21 +1,21 @@
 {
 # 公众号配置
 # 公众号appId
-"app_id": "wxb67de90b9a0fedb2",
+"app_id": "wx72422d029413783e",
 # 公众号appSecret
-"app_secret": "9e5ca1ffdd0766eebf61e0b6ea2c9659",
+"app_secret": "2b256f3023951bd05d57a84d4627b1f6",
 # 模板消息id
-"template_id": "rhBFLHVh4hmlopDldU2gnaua5JMm0hHTfERfrRliBtc",
+"template_id": "FYOpP2OwoyvweAq5U6WlAsDSoJlF83XLEIXPSEHK8Zg",
 # 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
-"user": ["o_KmK6DG2Woqlve7Clz1bT-xXoBA", "o_KmK6H5uuMnLS27kdOmtcIWERdk"],
+"user": ["o3BY16okQ-XupdKnMinVxNUAiCR8"],
 
 # 信息配置
 # 所在省份
-"province": "安徽",
+"province": "浙江",
 # 所在城市
-"city": "阜阳",
+"city": "湖州",
 # 生日1，修改名字为对应需要显示的名字，如果生日为农历，在最前面加上r即可
-"birthday1": {"name": "悦悦", "birthday": "2002-02-26"},
+"birthday1": {"name": "杨帆", "birthday": "1996-08-06"},
 # 生日2
 "birthday2": {"name": "阳阳", "birthday": "1999-07-06"},
 # 在一起的日子，格式同上
